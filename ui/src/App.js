@@ -3,6 +3,7 @@ import React, { Fragment } from "react";
 
 //Components
 import ListTask from "./components/ListTask";
+import CreateTask from "./components/CreateTask";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="App">
         <h1>TODO App</h1>
         <ListTask />
+        <CreateTask />
       </div>
     </Fragment>
   );
