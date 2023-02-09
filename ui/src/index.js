@@ -3,6 +3,8 @@
 ////rootelement armazena o valor encontrado na root, para usar no createRoot.
 import { createRoot} from 'react-dom/client';
 
+import "./assets/styles/style.css"
+
 //Aqui vamos importar o App.js, que contem a função App( ) com os componentes.
 import App from "./App"
 
