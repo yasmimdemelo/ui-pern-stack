@@ -8,7 +8,7 @@ function App() {
   return (
     <Fragment >
       <div className="App">
-        <h1>Hello APP React</h1>
+        <h1>TODO App</h1>
         <ListTask />
       </div>
     </Fragment>
