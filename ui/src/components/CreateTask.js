@@ -4,8 +4,18 @@ function CreateTask({ onCreate }) {
     const [taskName, setTaskName] = useState("");
 
     const handleInsert = () => {
-        onCreate ({ task_name: taskName });
-        setTaskName("");
+        fetch("http://localhost:5000/tasks", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ task_name: taskName }),
+        })
+            .then((res) => res.json())
+            .then((task) => {
+                onCreate(task);
+                setTaskName("");
+            });
     };
 
     return (
