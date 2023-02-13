@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect} from "react";
+import CreateTask from "./CreateTask";
 
 function ListTask() {
     const [tasks, setTasks] = useState([]);
@@ -9,8 +10,13 @@ function ListTask() {
         .then((data) => setTasks(data));
     }, []);
 
+    const handleCreate = (task) => {
+        setTasks([...tasks, task]);
+    };
+
     return(
         <Fragment>
+            <CreateTask onCreate={handleCreate}/>
             <div>
                 <ul>
                     {tasks.map((task) => (
