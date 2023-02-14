@@ -11,11 +11,16 @@ function ListTask() {
     }, []);
 
     const handleCreate = (task) => {
-        setTasks([...tasks, task]);
+        setTasks((prevTasks) => [...prevTasks, task]);
     };
 
     const handleDelete = (taskId) => {
-        setTasks(tasks.filter((task) => task.id !==taskId));
+        fetch(`http://localhost:5000/tasks/${taskId}`, {
+            method: 'DELETE'
+        })
+        .then(() => {
+            setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
+        });
     };
 
     return(
