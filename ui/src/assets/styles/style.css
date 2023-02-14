@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: o;
+    margin: 0;
 }
 
 .App {
@@ -15,8 +15,20 @@ div {
     flex-direction: column;
     align-items: center;
     align-content: center;
+    margin-top: 30px;
+}
+
+button {
+    margin-left: 3px;
+    border-radius: 3px;
+}
+
+#add {
+    margin-top: 3px;
 }
 
 ul {
     list-style: none;
+    line-height: 1.6;
+    padding: 0;
 }

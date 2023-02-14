@@ -23,9 +23,10 @@ function CreateTask({ onCreate }) {
             <div>
                 <input
                     value={taskName}
+                    placeholder="Enter your task here..."
                     onChange={(e) => setTaskName(e.target.value)}
                 />
-                <button onClick={handleInsert}>Add</button>
+                <button id="add" onClick={handleInsert}>Add</button>
             </div>
         </Fragment>
     );
