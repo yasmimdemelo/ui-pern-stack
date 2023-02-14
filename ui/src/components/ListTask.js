@@ -14,13 +14,20 @@ function ListTask() {
         setTasks([...tasks, task]);
     };
 
+    const handleDelete = (taskId) => {
+        setTasks(tasks.filter((task) => task.id !==taskId));
+    };
+
     return(
         <Fragment>
             <CreateTask onCreate={handleCreate}/>
             <div>
                 <ul>
                     {tasks.map((task) => (
-                        <li key={task.id}>{task.task_name}</li>
+                        <li key={task.id}>
+                            {task.task_name}
+                            <button onClick={() => handleDelete(task.id)}>Delete</button>
+                        </li>
                     ))}
                 </ul>
             </div>
