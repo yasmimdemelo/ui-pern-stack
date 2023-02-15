@@ -6,6 +6,8 @@ function ListTask() {
     const [tasks, setTasks] = useState([]);
     const [selectedTask, setSelectedTask] = useState(null);
 
+    //Recupa os dados através do endponit da API e defini os dados retornados para o tasks estado usando setTasks função.
+    //[] = significa que esse esfeito será executado apenas uma vez, quando o componente for montado.
     useEffect(() => {
         fetch("http://localhost:5000/tasks")
         .then((res) => res.json())
@@ -16,6 +18,8 @@ function ListTask() {
         setTasks((prevTasks) => [...prevTasks, task]);
     };
 
+    //filter() método cria uma nova matriz que contém todas as tasks, exceto aquela que corresponde ao dado taskId.
+    //Nesse caso, a função de retorno de chamada verifica se o id da task atual corresponde ao taskId que foi passado para a função e exclui essa tarefa do novo array.
     const handleDelete = (taskId) => {
         fetch(`http://localhost:5000/tasks/${taskId}`, {
             method: 'DELETE'
@@ -39,6 +43,7 @@ function ListTask() {
         setSelectedTask(task);
     };
     
+    //{selectedTask && selectedTask.id === task.id ? (...) fornece uma maneira de renderizar condicionalmente um componente de atualização
     return(
         <Fragment>
             <CreateTask onCreate={handleCreate}/>
