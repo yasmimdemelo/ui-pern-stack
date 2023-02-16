@@ -21,11 +21,13 @@ Softwares:
 - Docker
 - Pg Admin 4
 
-Antes de começarmos a executar os comandos, temos que estar executando o 1º projeto que é a parte de beckend:
+Antes de começarmos a executar os comandos, temos que estar executando o 1º projeto que é a parte de backend:
 - https://github.com/yasmimdemelo/api-node-postgresql
 
 Comandos para executar:
-1. npm install
+1. cd ui/
+    - Abre a pasta ui
+2. npm install
     - Instala as dependências.
-2. npm start
+3. npm start
     - Inicia o servidor de desenvolvimento do aplicativo React.
