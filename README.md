@@ -25,8 +25,7 @@ Antes de começarmos a executar os comandos, temos que estar executando o 1º pr
 - https://github.com/yasmimdemelo/api-node-postgresql
 
 Comandos para executar:
-1. npm start
-    - Inicia o servidor de desenvolvimento para um aplicativo React.
-
-## Propósito para mim 🎯
-Estudar e entender o funcionamento PERN stack, que irei separar em 2 projetos.
+1. npm install
+    - Instala as dependências.
+2. npm start
+    - Inicia o servidor de desenvolvimento do aplicativo React.
