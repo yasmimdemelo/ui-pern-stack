@@ -1,6 +1,7 @@
 # ui-pern-stack 💻
 Este projeto tem como finalidade configurar o frontend usando React, esta é a segunda parte da nossa aplicação PERN stack.
-Aqui você encontra o primeiro projeto: https://github.com/yasmimdemelo/api-node-postgresql.
+
+- Aqui você encontra o primeiro projeto: https://github.com/yasmimdemelo/api-node-postgresql.
 
 ## Pré-requisitos 🚀
 
